@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board</title>
+    <!-- tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main
+      id="mainContainer"
+      class="bg-gray-800 w-full h-screen p-4 overflow-scroll"
+    >
+      <!-- content container -->
+      <div class="contentContainer max-w-7xl mx-auto h-full">
+        <!-- nav -->
+        <nav
+          class="w-full bg-white p-4 rounded-md flex items-center justify-between"
+        >
+          <!-- left -->
+          <div class="flex items-center gap-2">
+            <!-- logo -->
+            <img src="./assets/logo.png" alt="nav logo" />
+            <!-- text -->
+            <h3 class="text-xl font-medium">
+              Dev<span class="font-bold">Board</span>
+            </h3>
+          </div>
+
+          <!-- right -->
+          <div class="flex items-center gap-3">
+            <!-- complete task -->
+            <div
+              class="flex items-center bg-gray-200 rounded-full gap-2 p-2 py-1"
+            >
+              <img src="./assets/checkbox.png" alt="checkbox-logo" />
+              <h2 class="text-xl font-bold">23</h2>
+            </div>
+            <!-- color picker -->
+            <div class="w-9 h-9 cursor-pointer">
+              <img
+                src="./assets/theme-btn.png"
+                alt="color picker btn"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </nav>
+        <!-- main content -->
+        <section class="w-full py-4 flex gap-4">
+          <!-- task container -->
+          <div class="w-9/12 p-4 bg-white rounded-md flex flex-col gap-3">
+            <!-- task container header -->
+            <div
+              class="flex gap-3 pb-4 w-full h-fit border-b-2 border-dashed border-gray-300"
+            >
+              <!-- left -->
+              <div
+                class="w-3/12 p-4 bg-gray-200 rounded-md flex items-center gap-2"
+              >
+                <!-- checkbox -->
+                <div class="p-2 bg-white rounded-full">
+                  <img
+                    src="./assets/checkbox.png"
+                    alt="checkbox-logo"
+                    class="w-6 h-6"
+                  />
+                </div>
+
+                <!-- text -->
+                <div>
+                  <h3 class="text-xl font-medium capitalize">task assign</h3>
+                  <h2 class="text-xl font-bold">06</h2>
+                </div>
+              </div>
+              <!-- middle -->
+              <div
+                class="w-6/12 p-4 bg-blue-500 rounded-md flex gap-4 items-center"
+              >
+                <!-- image -->
+                <div>
+                  <img src="./assets/board.png" alt="board image" />
+                </div>
+                <!-- text -->
+                <div class="text-xl text-gray-50 font-medium">
+                  Discover Something New Today!
+                </div>
+              </div>
+              <!-- right -->
+              <div class="w-3/12 p-4 bg-gray-200 rounded-md flex items-center">
+                <!-- image -->
+                <div>
+                  <img src="./assets/calender.png" alt="calender-image" />
+                </div>
+
+                <!-- date -->
+                <div class="date"></div>
+              </div>
+            </div>
+
+            <!-- task cards -->
+            <div class="rounded-md grid grid-cols-3 gap-3">
+              <!-- first card container -->
+              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+                <!-- card bach -->
+                <div class="px-2 py-1 rounded-md bg-white w-fit">
+                  <p class="text-sm">ShopEase</p>
+                </div>
+                <!-- card title -->
+                <h2 class="text-lg font-medium">Fix Mobile Button Issue</h2>
+                <!-- card paragraph -->
+                <div class="p-3 bg-white rounded-md">
+                  <p class="text-sm text-gray-500">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+                <!-- card bottom -->
+                <div
+                  class="border-t-2 mt-3 border-dashed border-gray-300 flex items-center justify-between pt-2"
+                >
+                  <!-- left -->
+                  <div>
+                    <p class="capitalize text-gray-700 text-sm">deadline</p>
+                    <p class="text-sm capitalize font-medium">21 March 2025</p>
+                  </div>
+                  <!-- right -->
+                  <div>
+                    <button
+                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- second card container -->
+              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+                <!-- card bach -->
+                <div class="px-2 py-1 rounded-md bg-white w-fit">
+                  <p class="text-sm">CloudSync</p>
+                </div>
+                <!-- card title -->
+                <h2 class="text-lg font-medium">Add Dark Mode</h2>
+                <!-- card paragraph -->
+                <div class="p-3 bg-white rounded-md">
+                  <p class="text-sm text-gray-500">
+                    Store the user's preference in localStorage, update CSS
+                    variables dynamically, and apply a smooth transition effect.
+                  </p>
+                </div>
+                <!-- card bottom -->
+                <div
+                  class="border-t-2 mt-3 border-dashed border-gray-300 flex items-center justify-between pt-2"
+                >
+                  <!-- left -->
+                  <div>
+                    <p class="capitalize text-gray-700 text-sm">deadline</p>
+                    <p class="text-sm capitalize font-medium">21 March 2025</p>
+                  </div>
+                  <!-- right -->
+                  <div>
+                    <button
+                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- third card container -->
+              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+                <!-- card bach -->
+                <div class="px-2 py-1 rounded-md bg-white w-fit">
+                  <p class="text-sm">SwiftPay</p>
+                </div>
+                <!-- card title -->
+                <h2 class="text-lg font-medium">Optimize Home page </h2>
+                <!-- card paragraph -->
+                <div class="p-3 bg-white rounded-md">
+                  <p class="text-sm text-gray-500">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+                <!-- card bottom -->
+                <div
+                  class="border-t-2 mt-3 border-dashed border-gray-300 flex items-center justify-between pt-2"
+                >
+                  <!-- left -->
+                  <div>
+                    <p class="capitalize text-gray-700 text-sm">deadline</p>
+                    <p class="text-sm capitalize font-medium">21 March 2025</p>
+                  </div>
+                  <!-- right -->
+                  <div>
+                    <button
+                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- fourth card container -->
+              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+                <!-- card bach -->
+                <div class="px-2 py-1 rounded-md bg-white w-fit">
+                  <p class="text-sm">Meta</p>
+                </div>
+                <!-- card title -->
+                <h2 class="text-lg font-medium">Add new emoji 🤲</h2>
+                <!-- card paragraph -->
+                <div class="p-3 bg-white rounded-md">
+                  <p class="text-sm text-gray-500">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+                <!-- card bottom -->
+                <div
+                  class="border-t-2 mt-3 border-dashed border-gray-300 flex items-center justify-between pt-2"
+                >
+                  <!-- left -->
+                  <div>
+                    <p class="capitalize text-gray-700 text-sm">deadline</p>
+                    <p class="text-sm capitalize font-medium">21 March 2025</p>
+                  </div>
+                  <!-- right -->
+                  <div>
+                    <button
+                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- fifth card container -->
+              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+                <!-- card bach -->
+                <div class="px-2 py-1 rounded-md bg-white w-fit">
+                  <p class="text-sm">Google LLC</p>
+                </div>
+                <!-- card title -->
+                <h2 class="text-lg font-medium">Integrate OpenAI API</h2>
+                <!-- card paragraph -->
+                <div class="p-3 bg-white rounded-md">
+                  <p class="text-sm text-gray-500">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+                <!-- card bottom -->
+                <div
+                  class="border-t-2 mt-3 border-dashed border-gray-300 flex items-center justify-between pt-2"
+                >
+                  <!-- left -->
+                  <div>
+                    <p class="capitalize text-gray-700 text-sm">deadline</p>
+                    <p class="text-sm capitalize font-medium">21 March 2025</p>
+                  </div>
+                  <!-- right -->
+                  <div>
+                    <button
+                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- sixth card container -->
+              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+                <!-- card bach -->
+                <div class="px-2 py-1 rounded-md bg-white w-fit">
+                  <p class="text-sm">GlassDoor</p>
+                </div>
+                <!-- card title -->
+                <h2 class="text-lg font-medium">Improve Job searching</h2>
+                <!-- card paragraph -->
+                <div class="p-3 bg-white rounded-md">
+                  <p class="text-sm text-gray-500">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+                <!-- card bottom -->
+                <div
+                  class="border-t-2 mt-3 border-dashed border-gray-300 flex items-center justify-between pt-2"
+                >
+                  <!-- left -->
+                  <div>
+                    <p class="capitalize text-gray-700 text-sm">deadline</p>
+                    <p class="text-sm capitalize font-medium">21 March 2025</p>
+                  </div>
+                  <!-- right -->
+                  <div>
+                    <button
+                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- activity log -->
+          <div class="w-3/12 p-4 rounded-md bg-white">
+            <!-- activity header -->
+            <div
+              class="pb-8 pt-2 w-full h-fit border-b-2 border-dashed border-gray-300"
+            >
+              <h3 class="capitalize text-xl font-bold text-center">
+                activity log
+              </h3>
+
+              <!-- clear btn -->
+              <button
+                class="px-4 py-2 bg-blue-500 text-white capitalize text-base rounded-md mx-auto block mt-5"
+              >
+                clear history
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
