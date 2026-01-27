@@ -40,7 +40,7 @@
               class="flex items-center bg-gray-200 rounded-full gap-2 p-2 py-1"
             >
               <img src="./assets/checkbox.png" alt="checkbox-logo" />
-              <h2 class="text-xl font-bold">23</h2>
+              <h2 id="completedTask" class="text-xl font-bold">23</h2>
             </div>
             <!-- color picker -->
             <div id="colorPicker" class="w-9 h-9 cursor-pointer">
@@ -76,7 +76,7 @@
                 <!-- text -->
                 <div>
                   <h3 class="text-xl font-medium capitalize">task assign</h3>
-                  <h2 class="text-xl font-bold -mt-1.5">06</h2>
+                  <h2 id="assignedTask" class="text-xl font-bold -mt-1.5">6</h2>
                 </div>
               </div>
               <!-- middle -->
@@ -107,9 +107,12 @@
             </div>
 
             <!-- task cards -->
-            <div class="rounded-md grid grid-cols-3 gap-3">
+            <div
+              id="taskCardsContainer"
+              class="rounded-md grid grid-cols-3 gap-3"
+            >
               <!-- first card container -->
-              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+              <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
                 <!-- card bach -->
                 <div class="px-2 py-1 rounded-md bg-white w-fit">
                   <p class="text-sm">ShopEase</p>
@@ -136,16 +139,16 @@
                   <!-- right -->
                   <div>
                     <button
-                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                      class="completeBtn px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      completed
+                      complete
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- second card container -->
-              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+              <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
                 <!-- card bach -->
                 <div class="px-2 py-1 rounded-md bg-white w-fit">
                   <p class="text-sm">CloudSync</p>
@@ -171,16 +174,16 @@
                   <!-- right -->
                   <div>
                     <button
-                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                      class="completeBtn px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      completed
+                      complete
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- third card container -->
-              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+              <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
                 <!-- card bach -->
                 <div class="px-2 py-1 rounded-md bg-white w-fit">
                   <p class="text-sm">SwiftPay</p>
@@ -207,16 +210,16 @@
                   <!-- right -->
                   <div>
                     <button
-                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                      class="completeBtn px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      completed
+                      complete
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- fourth card container -->
-              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+              <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
                 <!-- card bach -->
                 <div class="px-2 py-1 rounded-md bg-white w-fit">
                   <p class="text-sm">Meta</p>
@@ -243,16 +246,16 @@
                   <!-- right -->
                   <div>
                     <button
-                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                      class="completeBtn px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      completed
+                      complete
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- fifth card container -->
-              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+              <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
                 <!-- card bach -->
                 <div class="px-2 py-1 rounded-md bg-white w-fit">
                   <p class="text-sm">Google LLC</p>
@@ -279,7 +282,7 @@
                   <!-- right -->
                   <div>
                     <button
-                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                      class="completeBtn px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
                     >
                       completed
                     </button>
@@ -288,7 +291,7 @@
               </div>
 
               <!-- sixth card container -->
-              <div class="p-3 bg-gray-200 rounded-md space-y-2">
+              <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
                 <!-- card bach -->
                 <div class="px-2 py-1 rounded-md bg-white w-fit">
                   <p class="text-sm">GlassDoor</p>
@@ -315,9 +318,9 @@
                   <!-- right -->
                   <div>
                     <button
-                      class="px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
+                      class="completeBtn px-4 py-1.5 bg-blue-500 capitalize text-white cursor-pointer rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
                     >
-                      completed
+                      complete
                     </button>
                   </div>
                 </div>
@@ -341,6 +344,12 @@
                 clear history
               </button>
             </div>
+
+            <!-- history container -->
+            <div
+              id="historyContainer"
+              class="space-y-4 w-full h-fit pt-3"
+            ></div>
           </div>
         </section>
       </div>

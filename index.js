@@ -58,5 +58,56 @@ function showDateAndDay() {
                   </h2>
   `;
 }
+
+// task cards functionalities
+const getTaskCardsContainer = document.getElementById("taskCardsContainer");
+const historyContainer = document.getElementById("historyContainer");
+
+getTaskCardsContainer.addEventListener("click", function (e) {
+  e.stopImmediatePropagation();
+  const target = e.target;
+
+  const assignedTask = document.getElementById("assignedTask");
+  const completedTask = document.getElementById("completedTask");
+
+  if (target.classList.contains("completeBtn")) {
+    // current numbers
+    let assignedTaskCount = parseInt(assignedTask.innerText);
+    let completedTaskCount = parseInt(completedTask.innerText);
+    const card = target.closest(".cardContainer");
+    const title = card.querySelector("h2");
+
+    // update counts
+    assignedTask.innerText = assignedTaskCount - 1;
+    completedTask.innerText = completedTaskCount + 1;
+
+    // alerts
+    alert(`Complete ${title.innerText} task`);
+    if (parseInt(assignedTask.innerText) === 0) {
+      setTimeout(function () {
+        alert("🎉 Congratulations you have completed all the tasks!");
+      }, 300);
+    }
+
+    // disable button
+    target.disabled = true;
+    target.innerText = "completed";
+
+    // current time
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+
+    // create history div
+    const historyDiv = document.createElement("div");
+    historyDiv.className = "p-3 bg-gray-200 rounded-md";
+
+    historyDiv.innerHTML = `<p class="text-sm text-gray-500">
+        You have completed <span class="font-medium">${title.innerText}</span> at ${time}
+      </p>`;
+
+    historyContainer.appendChild(historyDiv);
+  }
+});
+
 changeMainContainerBgColor();
 showDateAndDay();
