@@ -62,6 +62,7 @@ function showDateAndDay() {
 // task cards functionalities
 const getTaskCardsContainer = document.getElementById("taskCardsContainer");
 const historyContainer = document.getElementById("historyContainer");
+const clearHistoryBtn = document.getElementById("clearHistoryBtn");
 
 getTaskCardsContainer.addEventListener("click", function (e) {
   e.stopImmediatePropagation();
@@ -107,6 +108,13 @@ getTaskCardsContainer.addEventListener("click", function (e) {
 
     historyContainer.appendChild(historyDiv);
   }
+});
+
+// clear history btn
+clearHistoryBtn.addEventListener("click", function (e) {
+  e.stopImmediatePropagation();
+
+  historyContainer.innerHTML = ``;
 });
 
 changeMainContainerBgColor();
