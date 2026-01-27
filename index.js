@@ -17,4 +17,46 @@ function changeMainContainerBgColor() {
   });
 }
 
+// show date and day
+function showDateAndDay() {
+  const getDateContainer = document.getElementById("getDateContainer");
+
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const now = new Date();
+  const getToday = days[now.getDay()];
+  const getMonth = months[now.getMonth()];
+  const getDate = now.getDate();
+  const getYear = now.getFullYear();
+
+  getDateContainer.innerHTML = `
+                  <h3 class="capitalize text-lg font-medium">${getToday},</h3>
+                  <h2 class="capitalize text-lg font-bold -mt-1.5">
+                    ${getDate} ${getMonth} ${getYear}
+                  </h2>
+  `;
+}
 changeMainContainerBgColor();
+showDateAndDay();
