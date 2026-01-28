@@ -26,9 +26,9 @@
           <!-- left -->
           <div class="flex items-center gap-2">
             <!-- logo -->
-            <img src="./assets/logo.png" alt="nav logo" />
+            <img src="./assets/logo.png" alt="nav logo" class="w-10 h-10" />
             <!-- text -->
-            <h3 class="text-xl font-medium">
+            <h3 class="text-lg md:text-xl font-medium">
               Dev<span class="font-bold">Board</span>
             </h3>
           </div>
@@ -39,8 +39,14 @@
             <div
               class="flex items-center bg-gray-200 rounded-full gap-2 p-2 py-1"
             >
-              <img src="./assets/checkbox.png" alt="checkbox-logo" />
-              <h2 id="completedTask" class="text-xl font-bold">23</h2>
+              <img
+                src="./assets/checkbox.png"
+                alt="checkbox-logo"
+                class="w-5 h-5"
+              />
+              <h2 id="completedTask" class="text-lg md:text-xl font-bold">
+                23
+              </h2>
             </div>
             <!-- color picker -->
             <div id="colorPicker" class="w-9 h-9 cursor-pointer">
@@ -53,16 +59,18 @@
           </div>
         </nav>
         <!-- main content -->
-        <section class="w-full py-4 flex gap-4">
+        <section class="w-full py-4 lg:flex gap-4 space-y-4 lg:space-y-0">
           <!-- task container -->
-          <div class="w-9/12 p-4 bg-white rounded-md flex flex-col gap-3">
+          <div
+            class="w-full lg:w-9/12 p-4 bg-white rounded-md flex flex-col gap-3"
+          >
             <!-- task container header -->
             <div
-              class="flex gap-3 pb-4 w-full h-fit border-b-2 border-dashed border-gray-300"
+              class="md:flex space-y-3 md:space-y-0 gap-3 pb-4 w-full h-fit border-b-2 border-dashed border-gray-300"
             >
               <!-- left -->
               <div
-                class="w-3/12 p-4 bg-gray-200 rounded-md flex items-center gap-2"
+                class="md:w-4/12 lg:w-3/12 p-4 bg-gray-200 rounded-md flex items-center gap-2"
               >
                 <!-- checkbox -->
                 <div class="p-2 bg-white rounded-full">
@@ -75,26 +83,37 @@
 
                 <!-- text -->
                 <div>
-                  <h3 class="text-xl font-medium capitalize">task assign</h3>
-                  <h2 id="assignedTask" class="text-xl font-bold -mt-1.5">6</h2>
+                  <h3 class="text-lg lg:text-xl font-medium capitalize">
+                    task assign
+                  </h3>
+                  <h2
+                    id="assignedTask"
+                    class="text-lg lg:text-xl font-bold -mt-1.5"
+                  >
+                    6
+                  </h2>
                 </div>
               </div>
               <!-- middle -->
               <div
-                class="w-6/12 p-4 bg-blue-500 rounded-md flex gap-4 items-center"
+                class="md:w-4/12 lg:w-6/12 p-4 bg-blue-500 rounded-md flex gap-4 items-center"
               >
                 <!-- image -->
                 <div>
-                  <img src="./assets/board.png" alt="board image" />
+                  <img
+                    src="./assets/board.png"
+                    alt="board image"
+                    class="w-14 h-14 lg:w-16 lg:h-16"
+                  />
                 </div>
                 <!-- text -->
-                <div class="text-xl text-gray-50 font-medium">
+                <div class="text-lg lg:text-xl text-gray-50 font-medium">
                   Discover Something New Today!
                 </div>
               </div>
               <!-- right -->
               <div
-                class="w-3/12 p-4 bg-gray-200 rounded-md flex items-center gap-3"
+                class="lg:w-3/12 md:w-4/12 p-4 bg-gray-200 rounded-md flex items-center gap-3"
               >
                 <!-- image -->
                 <div class="p-2 bg-white rounded-full">
@@ -109,7 +128,7 @@
             <!-- task cards -->
             <div
               id="taskCardsContainer"
-              class="rounded-md grid grid-cols-3 gap-3"
+              class="rounded-md grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"
             >
               <!-- first card container -->
               <div class="p-3 cardContainer bg-gray-200 rounded-md space-y-2">
@@ -123,8 +142,7 @@
                 <div class="p-3 bg-white rounded-md">
                   <p class="text-sm text-gray-500">
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly and ensure onClick
                   </p>
                 </div>
                 <!-- card bottom -->
@@ -194,8 +212,7 @@
                 <div class="p-3 bg-white rounded-md">
                   <p class="text-sm text-gray-500">
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly and ensure onClick
                   </p>
                 </div>
                 <!-- card bottom -->
@@ -230,8 +247,7 @@
                 <div class="p-3 bg-white rounded-md">
                   <p class="text-sm text-gray-500">
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly and ensure onClick
                   </p>
                 </div>
                 <!-- card bottom -->
@@ -266,8 +282,7 @@
                 <div class="p-3 bg-white rounded-md">
                   <p class="text-sm text-gray-500">
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly and ensure onClick
                   </p>
                 </div>
                 <!-- card bottom -->
@@ -302,8 +317,7 @@
                 <div class="p-3 bg-white rounded-md">
                   <p class="text-sm text-gray-500">
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly and ensure onClick
                   </p>
                 </div>
                 <!-- card bottom -->
@@ -328,7 +342,7 @@
             </div>
           </div>
           <!-- activity log -->
-          <div class="w-3/12 p-4 rounded-md bg-white">
+          <div class="w-full lg:w-3/12 p-4 rounded-md bg-white">
             <!-- activity header -->
             <div
               class="pb-8 pt-2 w-full h-fit border-b-2 border-dashed border-gray-300"

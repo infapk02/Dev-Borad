@@ -52,8 +52,8 @@ function showDateAndDay() {
   const getYear = now.getFullYear();
 
   getDateContainer.innerHTML = `
-                  <h3 class="capitalize text-lg font-medium">${getToday},</h3>
-                  <h2 class="capitalize text-lg font-bold -mt-1.5">
+                  <h3 class="capitalize text-base font-medium">${getToday},</h3>
+                  <h2 class="capitalize text-base font-bold -mt-1.5">
                     ${getDate} ${getMonth} ${getYear}
                   </h2>
   `;
