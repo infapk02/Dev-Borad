@@ -29,7 +29,7 @@ It allows users to track assigned tasks, mark them as completed, view completion
 
 ## 📂 Project Structure
 
-`DevBoard/
+```DevBoard/
 │
 ├── index.html
 ├── index.js
@@ -39,7 +39,7 @@ It allows users to track assigned tasks, mark them as completed, view completion
 │ ├── board.png
 │ ├── calender.png
 │ └── theme-btn.png
-`
+```
 
 ---
 
